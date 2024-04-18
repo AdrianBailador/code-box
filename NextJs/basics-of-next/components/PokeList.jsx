@@ -25,6 +25,7 @@ const PokeList = () => {
         <ul>
             {pokeList.map((pokemone, index) => (
                 <li key={pokemone.name}>{pokemone.name}</li>
+                
             ))}
         </ul>
 
