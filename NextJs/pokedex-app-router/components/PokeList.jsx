@@ -10,13 +10,19 @@ const PokeList = async () => {
     const data = await response.json()
     const pokemonList = data.results
 
+    const allPokemonData = await Promise.all(pokemonList.map(async (pokemon) => {
+        const response = await fetch(pokemon.url)
+        const data = await response.json()
+        return data
+    }))
+
     console.log(pokemonList)
 
     return (
         <div className={HomeCss.columnas}>
             <ul>
                 {
-                    pokemonList.map((pokemon) => (
+                    allPokemonData.map((pokemon) => (
                     <li key={pokemon.id}>
                         <PokeCard pokemon={pokemon}/>
                     </li>

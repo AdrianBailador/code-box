@@ -4,10 +4,7 @@ import HomeCss from '../styles/Home.module.css' // Importa el módulo CSS para e
 const PokeCard = ({pokemon}) => {
     return (
         // Un componente Link para la ruta a la página del pokemon
-        <Link scroll={false} href={{
-            pathname: '/pokemon/[name]',
-            query: {name: pokemon.name}
-        }}>
+        <Link scroll={false} href={pokemon.name}>
             <div className={`${HomeCss.card} ${pokemon.types[0].type.name}`}>
                 <div className={HomeCss.nombreTipos}>
 
