@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HomeCss from '../styles/Home.module.css' // Importa el módulo CSS para el estilo
+import '../styles/globals.css'; // Importa el archivo CSS global
 
 const PokeCard = ({pokemon}) => {
     return (
@@ -30,7 +31,6 @@ const PokeCard = ({pokemon}) => {
                 />
             </div>
         </Link>
-
     );
 };
 
