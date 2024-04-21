@@ -13,10 +13,9 @@ const PokeList = async () => {
     const allPokemonData = await Promise.all(pokemonList.map(async (pokemon) => {
         const response = await fetch(pokemon.url)
         const data = await response.json()
+        console.log(JSON.stringify(data, null, 2))
         return data
     }))
-
-    console.log(pokemonList)
 
     return (
         <div className={HomeCss.columnas}>
