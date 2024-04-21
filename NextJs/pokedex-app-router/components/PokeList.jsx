@@ -3,7 +3,7 @@ import PokeCard from "@/components/PokeCard";
 import HomeCss from '../styles/Home.module.css' // Importa el módulo CSS para el estilo
 
 
-const PokeList = async ({pokemon}) => {
+const PokeList = async () => {
     // Hace una petición a la API de Pokemon
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=0.`)
     // Convierte la respuesta en JSON
