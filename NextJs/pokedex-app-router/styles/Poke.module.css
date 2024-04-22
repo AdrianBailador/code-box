@@ -58,3 +58,56 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+.PokeCss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+}
+
+.header, .body, .footer {
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.types, .abilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.type, .ability {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}

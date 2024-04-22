@@ -4,7 +4,7 @@ import '../styles/globals.css'; // Importa el archivo CSS global
 
 const PokeCard = ({pokemon}) => {
     return (
-        <Link scroll={false} href={pokemon.name}>
+        <Link scroll={false} href={`/pokemon/${pokemon.id}`}>
             <div className={`${HomeCss.contenedor} ${pokemon.types[0].type.name}`}>
                 <div className={HomeCss.nombreTipos}>
                     <h3 exit={{opacity: 0}}>{pokemon.name}</h3>
