@@ -1,37 +1,55 @@
 import Link from 'next/link';
-import HomeCss from '../styles/Home.module.css' // Importa el módulo CSS para el estilo
-import '../styles/globals.css'; // Importa el archivo CSS global
+import '../styles/globals.css';
+import Image from "next/image";
 
-const PokeCard = ({pokemon}) => {
+function getTypeIconSrc(type) {
+    return `/images/types-icons/${type}.svg`;
+}
+
+function getPokemonImage(id) {
+    const isPokemonHasSvg = id < 650;
+    const base = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other`;
+    if (isPokemonHasSvg) {
+        return `${base}/dream-world/${id}.svg`;
+    }
+    return `${base}/official-artwork/${id}.png`;
+}
+
+const PokeCard = ({pokemon, pokemon: {name}}) => {
+
     return (
         // Un componente Link para la ruta a la página del pokemon
-        <Link className={`${HomeCss.card}`} scroll={false} href={pokemon.name}>
-            <div className={`${HomeCss.card} ${pokemon.types[0].type.name}`}>
-                <div className={HomeCss.nombreTipos}>
+        <Link className={`pokemon-card ${pokemon.types[0].type.name}`} href={pokemon.name}>
+            <div>
+                <span className='id-number'>{'#' + pokemon.id}</span>
+                <span className='pokemon-name'>{name}</span>
 
-                    <h3 exit={{opacity: 0}}>{pokemon.name}</h3>
+                <div className='types'>
+                    {
+                        pokemon.types.map(({type}) => {
+                            const typeImg = getTypeIconSrc(type.name);
 
-
-                    <div className={HomeCss.tipos}>
-                        {pokemon.types.map((tipos, index) => { // Mapea los tipos del pokemon
                             return (
-                                <div key={index} className={HomeCss.tipo}>
-                                    {tipos.type.name}
+                                <div key={type.name} className={type.name}>
+                                    <img src={typeImg} alt={type.name}/>
+                                    <span className='type-name'>{type.name}</span>
                                 </div>
-                            )
-                        })}
-                    </div>
+                            );
+                        })
+                    }
                 </div>
-                <img
-                    src={pokemon.sprites.front_default} // La URL de la imagen del pokemon
-                    alt={pokemon.name} // El nombre del pokemon como texto alternativo para la imagen
-                    width={100}
-                    height={100}
-                    className={HomeCss.imagen} // La clase CSS para la imagen
-                />
             </div>
+
+            <div className='pokeball-bg'></div>
+            <Image
+                width={200}
+                height={200}
+                className='pokemon-image'
+                src={`${getPokemonImage(pokemon.id)}`}
+                alt={'pokemon-image'}/>
         </Link>
-    );
+    )
+        ;
 };
 
 export default PokeCard;
