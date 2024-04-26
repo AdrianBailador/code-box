@@ -4,6 +4,7 @@ import PokemonImage from "@/components/PokemonImage";
 const PokemonPage = async ({ params }) => {
     //get the name of the pokemon using object destructuring of the params object
     const { pokemonName } = params
+   // console.log(params)
     //call the getPokemonByName function using the pokemonAPIWrapper
     // Util and pass the name of the pokemon obtained from params
     const pokemonData = await  getPokemonByName(pokemonName)
