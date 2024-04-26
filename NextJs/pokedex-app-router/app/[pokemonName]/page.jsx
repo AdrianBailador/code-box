@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {getPokemonByName} from "@/utils/pokeAPIWrapper";
 import PokemonImage from "@/components/PokemonImage";
 

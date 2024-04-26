@@ -10,7 +10,5 @@ export async function getPokemonList() {
 //function to get the pokemon by name
 export async function getPokemonByName(name) {
     const response = await fetch(`${pokeAPI}pokemon/${name}`);
-    const data = await response.json();
-
-    return data;
+    return await response.json();
 }
