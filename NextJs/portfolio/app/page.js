@@ -1,13 +1,12 @@
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import ProfileInfo from "@/components/ProfileInfo";
+import SocialIcons from "@/components/SocialIcons";
 
 export default function Home() {
   return (
     <main className="">
-      <h1>Portfolio</h1>
-        <Button variant={"ghost"}>
-            Soy unn Boton
-        </Button>
+        <ProfileInfo/>
     </main>
   );
 }
