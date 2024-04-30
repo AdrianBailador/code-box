@@ -1,27 +1,21 @@
 // ProfileInfo.jsx
-import Image from 'next/image';
 import SocialIcons from './SocialIcons';
+import ProfileImage from "@/components/ProfileImage";
 
 
 const ProfileInfo = () => {
   return (
-    <div style={{ 
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'center', 
-      marginTop: '1cm'
-    }}>
+    <div className={'flex items-center justify-center mt-5'} >
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ borderRadius: '50%', overflow: 'hidden', marginRight: '1rem' }}>
-          <Image src="/foto.png" 
-          alt="Foto de perfil" 
-          width={100} 
-          height={100} />
+           <ProfileImage url={'/foto.png'} title={'My profile picture'} width={'100'} height={'100'} />
         </div>
-        <div>
-          <h2>Victor and Adri</h2>
-          <p>FullStack Developer</p>
-          <SocialIcons />
+        <div className={'flex flex-col gap-2'}>
+          <div className="info">
+            <h1 className={'text-2xl text-gray-700 font-bold'}>Victor and Adri</h1>
+            <p className={'italic'}>FullStack Developer</p>
+          </div>
+          <SocialIcons/>
         </div>
       </div>
     </div>
