@@ -3,7 +3,6 @@
 import {SlSocialLinkedin} from "react-icons/sl";
 import {MdMailOutline} from "react-icons/md";
 import {Button} from "@/components/ui/button";
-import Link from "next/link";
 
 const ProfileActionButtons = () => {
     return (
