@@ -1,25 +1,45 @@
-import { FaInstagram, FaTwitter, FaYoutube, FaGithub, FaTiktok } from 'react-icons/fa';
+import {FaInstagram, FaTwitter, FaYoutube, FaGithub, FaTiktok} from 'react-icons/fa';
+import Link from 'next/link';
+
+const socialnetworks = [
+    {
+        name: 'Instagram',
+        url: 'https://www.instagram.com/tu_usuario',
+        icon: <FaInstagram size={24}/>,
+    },
+    {
+        name: 'Twitter',
+        url: 'https://twitter.com/tu_usuario',
+        icon: <FaTwitter size={24}/>,
+    },
+    {
+        name: 'YouTube',
+        url: 'https://www.youtube.com/c/tu_usuario',
+        icon: <FaYoutube size={24}/>,
+    },
+    {
+        name: 'GitHub',
+        url: 'http://github.com',
+        icon: <FaGithub size={24}/>
+    },
+]
 
 const SocialIcons = () => {
-  return (
-    <div style={{ display: 'flex', gap: '1rem' }}>
-      <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener noreferrer">
-        <FaInstagram size={24} />
-      </a>
-      <a href="https://twitter.com/tu_usuario" target="_blank" rel="noopener noreferrer">
-        <FaTwitter size={24} />
-      </a>
-      <a href="https://www.youtube.com/c/tu_usuario" target="_blank" rel="noopener noreferrer">
-        <FaYoutube size={24} />
-      </a>
-      <a href="https://github.com/tu_usuario" target="_blank" rel="noopener noreferrer">
-        <FaGithub size={24} />
-      </a>
-      <a href="https://www.tiktok.com/@tu_usuario" target="_blank" rel="noopener noreferrer">
-        <FaTiktok size={24} />
-      </a>
-    </div>
-  );
+    return (
+        <div style={{display: 'flex', gap: '1rem'}}>
+            {
+                socialnetworks.map((networkS) => (
+                    <Link
+                        className={networkS.name}
+                        href={networkS.url} key={networkS.name}
+                        target="_blank"
+                    >
+                        {networkS.icon}
+                    </Link>
+                ))
+            }
+        </div>
+    );
 };
 
 export default SocialIcons;
