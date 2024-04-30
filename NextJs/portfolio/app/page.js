@@ -8,6 +8,7 @@ export default function Home() {
             <ProfileInfo/>
             <ProfileActionButtons/>
             <TabsButtons/>
+            <TabsButtons/>
         </main>
     );
 }
