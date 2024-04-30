@@ -9,7 +9,6 @@ export default function Home() {
             <ProfileActionButtons/>
             <ProfileActionButtons/>
             <TabsButtons/>
-            <TabsButtons className={'hola'} />
         </main>
     );
 }
