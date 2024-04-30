@@ -7,6 +7,7 @@ export default function Home() {
         <main className="mt-[2rem] flex flex-col gap-4 justify-start items-center">
             <ProfileInfo/>
             <ProfileActionButtons/>
+            <ProfileActionButtons/>
             <TabsButtons/>
         </main>
     );
