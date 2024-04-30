@@ -17,6 +17,7 @@ const ProfileInfo = () => {
             <p className={'italic'}>FullStack Developer</p>
           </div>
           <SocialIcons/>
+          
         </div>
       </div>
     </div>
