@@ -73,4 +73,12 @@
     body {
       @apply bg-background text-foreground;
     }
+
+    .rotate-45 {
+      @apply rotate-[45deg];
+    }
+
+    .rotate-90 {
+      @apply rotate-[90deg];
+    }
   }
