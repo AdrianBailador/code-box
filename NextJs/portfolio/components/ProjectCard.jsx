@@ -1,38 +1,5 @@
 import Image from 'next/image';
-
-const projects = [
-  {
-    title: 'Proyecto 1',
-    description: 'Descripción del Proyecto 1',
-    imageUrl: '/Logotemp.png',
-  },
-  {
-    title: 'Proyecto 2',
-    description: 'Descripción del Proyecto 2',
-    imageUrl: '/Logotemp.png',
-  },
-  {
-    title: 'Proyecto 3',
-    description: 'Descripción del Proyecto 1',
-    imageUrl: '/Logotemp.png',
-  },
-  {
-    title: 'Proyecto 4',
-    description: 'Descripción del Proyecto 2',
-    imageUrl: '/Logotemp.png',
-  },
-  {
-    title: 'Proyecto 5',
-    description: 'Descripción del Proyecto 1',
-    imageUrl: '/Logotemp.png',
-  },
-  {
-    title: 'Proyecto 6',
-    description: 'Descripción del Proyecto 2',
-    imageUrl: '/Logotemp.png',
-  },
-
-];
+import { projects } from '../static_content/index';
 
 const ProjectCard = () => (
   <div className="grid grid-cols-2 gap-4">
