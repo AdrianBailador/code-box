@@ -1,6 +1,7 @@
 import ProfileInfo from "@/components/ProfileInfo";
 import ProfileActionButtons from "@/components/ProfileActionButtons";
 import TabsButtons from "@/components/TabsButtons";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
     return (
