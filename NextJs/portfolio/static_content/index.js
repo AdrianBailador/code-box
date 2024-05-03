@@ -54,34 +54,88 @@ export const socialNetworks = [
 
 export const projects = [
     {
+        id: '0',
         title: 'Proyecto 1',
         description: 'Descripción del Proyecto 1',
         imageUrl: '/Logotemp.png',
     },
     {
+        id: '1',
         title: 'Proyecto 2',
         description: 'Descripción del Proyecto 2',
         imageUrl: '/Logotemp.png',
     },
     {
+        id: '3',
         title: 'Proyecto 3',
         description: 'Descripción del Proyecto 1',
         imageUrl: '/Logotemp.png',
     },
     {
+        id: '4',
         title: 'Proyecto 4',
         description: 'Descripción del Proyecto 2',
         imageUrl: '/Logotemp.png',
     },
     {
+        id: '5',
         title: 'Proyecto 5',
         description: 'Descripción del Proyecto 1',
         imageUrl: '/Logotemp.png',
     },
     {
+        id: '6',
         title: 'Proyecto 6',
         description: 'Descripción del Proyecto 2',
         imageUrl: '/Logotemp.png',
     },
 
 ];
+
+export const personalDescription = {  
+    id: '0',  
+    description: 'Hola, Soy Adrian, Ingeniero Software, aprendiendo NEXT.JS, impartido por mi maestro Victor',
+  };
+  
+  export const workExperience = [
+    {
+        id: '0',
+      imageUrl: '/Logotemp.png',
+      name: 'Microsoft',
+      description: 'Desarrollador Web',
+      items: ['Dotnet', 'Microservicios', 'BBDD'],
+    },
+  ];
+  
+  export const education = [
+    {
+      id: '0',
+      imageUrl: '/Logotemp.png',
+      name: 'Ingenieria de Software',
+      description: 'Universidad de Valladolid',
+      items: ['Java', 'SQL', 'Arquitectura'],
+    },
+  ];
+  
+  export const skills = [
+    {
+      id: '0',  
+      imageUrl: '/Logotemp.png',
+      name: 'Dotnet',
+      description: '',
+    },
+    {
+        id: '1',  
+        imageUrl: '/Logotemp.png',
+        name: 'Javascript',
+        description: '',
+      },
+      {
+        id: '2',  
+        imageUrl: '/Logotemp.png',
+        name: 'Next js',
+        description: '',
+      },
+  ];
+  
+  
