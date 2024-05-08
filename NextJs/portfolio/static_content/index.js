@@ -54,37 +54,37 @@ export const socialNetworks = [
 
 export const projects = [
     {
-        id: '0',
+        slug: 'proyecto-1',
         title: 'Proyecto 1',
         description: 'Descripción del Proyecto 1',
         imageUrl: '/Logotemp.png',
     },
     {
-        id: '1',
+        slug: 'proyecto-2',
         title: 'Proyecto 2',
         description: 'Descripción del Proyecto 2',
         imageUrl: '/Logotemp.png',
     },
     {
-        id: '3',
+        slug: 'proyecto-3',
         title: 'Proyecto 3',
         description: 'Descripción del Proyecto 1',
         imageUrl: '/Logotemp.png',
     },
     {
-        id: '4',
+        slug: 'proyecto-4',
         title: 'Proyecto 4',
         description: 'Descripción del Proyecto 2',
         imageUrl: '/Logotemp.png',
     },
     {
-        id: '5',
+        slug: 'proyecto-5',
         title: 'Proyecto 5',
         description: 'Descripción del Proyecto 1',
         imageUrl: '/Logotemp.png',
     },
     {
-        id: '6',
+        slug: 'proyecto-6',
         title: 'Proyecto 6',
         description: 'Descripción del Proyecto 2',
         imageUrl: '/Logotemp.png',

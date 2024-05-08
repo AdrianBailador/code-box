@@ -1,12 +1,20 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { projects } from '../../static_content/index';
 import Image from 'next/image';
+import { projects as projectData } from '@/static_content/index';
 
-const Project = () => {
-  const router = useRouter();
-  const { projects } = router.query;
+const getProjectBySlug = (slug) => {
+  return projectData.find((project) => project.slug === slug);
+};
 
-  const project = projects.find((project) => project.id === id);
+const ProjectPage = ({ params }) => {
+  const { slug } = params;
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+    const project = getProjectBySlug(slug);
+    setProject(project);
+  }, [slug]);
 
   if (!project) {
     return <div>Project not found</div>;
@@ -27,4 +35,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectPage;
