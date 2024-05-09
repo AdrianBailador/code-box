@@ -1,21 +1,33 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { projects } from '../static_content/index';
+import Image from "next/image";
+import Link from "next/link";
 
-const ProjectCard = () => (
-  <div className="grid grid-cols-2 gap-4">
-    {projects.map((project, index) => (
-      <div key={index} className="rounded overflow-hidden shadow-lg m-2">
-        <Link href={`/project/${project.slug}`}>         
-            <Image className="w-full" src={project.imageUrl} alt={project.title} width={500} height={300} />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">{project.title}</div>
-              <p className="text-gray-700 text-base">{project.description}</p>
-            </div>        
+const ProjectCard = ({name, url, image, categories, slug}) => {
+    return (
+        <Link href={`/project/${slug}`}>
+            <div className="relative flex flex-col text-gray-700 bg-clip-border rounded-xl w-full">
+                <div className="relative overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-52">
+                    <Image
+                        loading={"lazy"}
+                        src={image}
+                        width={320}
+                        height={208}
+                        alt={"card-image"}
+                        className={"object-cover w-full h-full"}
+                    />
+                </div>
+                <div className="px-2 py-4">
+                    <p className="block font-sans text-base antialiased font-medium leading-relaxed text-primaryMain">
+                        {categories}
+                    </p>
+                    <div className="flex items-center justify-between mb-2">
+                        <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                            {name}
+                        </h5>
+                    </div>
+                </div>
+            </div>
         </Link>
-      </div>
-    ))}
-  </div>
-);
+    );
+};
 
 export default ProjectCard;
