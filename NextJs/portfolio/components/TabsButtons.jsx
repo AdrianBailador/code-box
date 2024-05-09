@@ -1,28 +1,22 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import ProjectCard from "./ProjectCard";
-import ProjectExperience from "./ProjectExperience";
-
+import React from 'react';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import ProjectList from "@/components/ProjectList";
 
 const TabsButtons = () => {
     return (
-
-
-        <div className="profile-action-buttons flex gap-2" style={{ display: 'flex', gap: '1rem' }}>
-            {
-
-                <Tabs defaultValue="account" className="w-[400px]">
-                    <TabsList>
-                        <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
-                        <TabsTrigger value="about">About</TabsTrigger>
-                    </TabsList>
-                    <TabsContent value="portfolio"><ProjectCard/></TabsContent>
-                    <TabsContent value="about"><ProjectExperience/></TabsContent>
-                </Tabs>
-            }
-        </div>
+        <Tabs defaultValue="portfolio" className="w-full ">
+            <TabsList className={"bg-tabsContainer w-full px-4 py-10 rounded-2xl"}>
+                <TabsTrigger className={"w-full py-4 rounded-2xl"} value="portfolio">Portfolio</TabsTrigger>
+                <TabsTrigger className={"w-full py-4 rounded-xl"} value="about">About</TabsTrigger>
+            </TabsList>
+            <TabsContent value="portfolio">
+                <ProjectList/>
+            </TabsContent>
+            <TabsContent value="about">
+                <h1>About Me</h1>
+            </TabsContent>
+        </Tabs>
     );
 };
 
 export default TabsButtons;
-
-
