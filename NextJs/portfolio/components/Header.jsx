@@ -1,12 +1,11 @@
 'use client';
-
 import {navigation} from "@/static_content";
-import {Button} from "@/components/ui/button";
 import {useState} from "react";
 import {usePathname} from "next/navigation";
 import Image from "next/image";
-import MenuSvg from "@/assets/MenuSvg";
-import {IoSunny} from "react-icons/io5";
+import MenuSvg from "@/components/MenuSvg";
+import {RiSunFill} from "@remixicon/react";
+import LogoTemp from "../public/Logotemp.png";
 
 const Header = () => {
     const pathname = usePathname();
@@ -28,19 +27,19 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-white/90 lg:backdrop-blur-sm ${
-                openNavigation ? "bg-white/80" : "bg-white/90 backdrop-blur-sm"
+            className={`fixed h-[64px] top-0 left-0 w-full z-50 bg-bgNav ${
+                openNavigation ? "bg-silver-n0/80" : "bg-bgNav backdrop-blur-sm"
             }`}
         >
-            <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-                <a className="block w-[60px] xl:mr-8" href="/">
-                    <Image src={'/LogoTemp.png'} width={60} height={40} alt="Brainwave"/>
+            <div className="flex justify-between items-center  h-full px-5 lg:px-7.5 xl:px-10">
+                <a className="relative block w-[60px] h-[40px] xl:mr-8" href="/public">
+                    <Image src={LogoTemp} alt="Logo Tipo" />
                 </a>
 
                 <nav
                     className={`${openNavigation ? "flex" : "hidden"} 
-                    fixed top-[5rem] left-0 right-0 bottom-0 bg-white/90 backdrop-blur-sm lg:static lg:flex lg:mx-auto lg:bg-transparent`
-                }
+                    fixed top-[4rem] left-0 right-0 bottom-0 bg-white/90 backdrop-blur-sm lg:static lg:flex lg:mx-auto lg:bg-transparent`
+                    }
                 >
                     <div className="w-full relative z-2 flex flex-col items-center justify-start lg:flex-row">
                         {navigation.map((item) => (
@@ -50,7 +49,7 @@ const Header = () => {
                                 onClick={handleClick}
                                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                                     item.onlyMobile ? "lg:hidden" : ""
-                                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                                } px-6 py-6 lg:py-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                                     item.url === pathname.hash
                                         ? "z-2 lg:text-n-1"
                                         : "lg:text-n-1/50"
@@ -61,16 +60,15 @@ const Header = () => {
                         ))}
                     </div>
                 </nav>
-                <Button className="hidden lg:flex rounded-full bg-green-600 p-6">
-                    <IoSunny size={24}/>
-                </Button>
-                <Button
+                <button className="hidden lg:flex rounded-full bg-primaryMain p-2">
+                    <RiSunFill size="24px" color="white" />
+                </button>
+                <button
                     className="ml-auto lg:hidden"
-                    px="px-3"
                     onClick={toggleNavigation}
                 >
                     <MenuSvg openNavigation={openNavigation} />
-                </Button>
+                </button>
             </div>
         </header>
     );
