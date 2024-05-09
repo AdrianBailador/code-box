@@ -55,55 +55,77 @@ export const socialNetworks = [
 export const projects = [
     {
         id: "0",
-        slug: 'proyecto-1',
-        title: 'Proyecto 1',
-        description: 'Descripción del Proyecto 1',
-        imageUrl: '/p1.png',
+        slug: "file_sharing_app_concept",
+        title: "File Sharing App Concept",
+        description: "A file sharing app concept that allows users to share files with other users. The app is designed to be simple and easy to use. Users can upload files, create folders, and share files with other users. " +
+            "The app also has a built-in chat feature that allows users to communicate with each other. The app is " +
+            "designed to be responsive and works on all devices. The app is built using React, Node.js, and MongoDB.",
+        imageUrl: "/images/file_sharing.jpeg",
         url: '',
         categories: ["mobile", "ui design"]
     },
     {
         id: "1",
-        slug: 'proyecto-2',
-        title: 'Proyecto 2',
-        description: 'Descripción del Proyecto 2',
-        imageUrl: '/p2.png',
+        slug: "nft_marketplace_concept",
+        title: "NFT Marketplace Concept",
+        description: "A concept for an NFT marketplace that allows users to buy and sell NFTs. The marketplace is " +
+            "designed to be simple and easy to use. Users can browse NFTs, view details about each NFT, and purchase " +
+            "NFTs using cryptocurrency. The marketplace also has a built-in wallet feature that allows users to store " +
+            "their NFTs securely. The marketplace is designed to be responsive and works on all devices. The marketplace " +
+            "is built using React, Node.js, and Ethereum.",
+        imageUrl: "/images/ntf_concept.jpeg",
         url: '',
-        categories: ["web", "ui design"]
+        categories: ["web", "ui design", "nft", "blockchain"]
     },
     {
-        slug: 'proyecto-3',
         id: "2",
-        title: 'Proyecto 3',
-        description: 'Descripción del Proyecto 1',
-        imageUrl: '/p3.jpeg',
+        slug: "fitness_app_concept",
+        title: "Fitness App Concept",
+        description: "A fitness app concept that allows users to track their workouts, set fitness goals, and monitor " +
+            "their progress. The app is designed to be simple and easy to use. Users can create custom workout plans, " +
+            "track their workouts, and view their progress over time. The app also has a built-in social feature that " +
+            "allows users to connect with other users and share their progress. The app is designed to be responsive and " +
+            "works on all devices. The app is built using React Native, Node.js, and MongoDB.",
+        imageUrl: '/images/fitness_concept.jpeg',
         url: '',
         categories: ["mobile", "ui design", "web"]
     },
     {
-        slug: 'proyecto-4',
         id: "3",
-        title: 'Proyecto 4',
-        description: 'Descripción del Proyecto 2',
-        imageUrl: '/p4.jpeg',
+        slug: "suhsi_app_concept",
+        title: 'Suhsi App Concept',
+        description: "A sushi ordering app concept that allows users to order sushi from their favorite restaurants. " +
+            "The app is designed to be simple and easy to use. Users can browse sushi menus, place orders, and pay for " +
+            "their orders using the app. The app also has a built-in loyalty program that rewards users for ordering " +
+            "sushi. The app is designed to be responsive and works on all devices. The app is built using React Native, " +
+            "Node.js, and MongoDB.",
+        imageUrl: "/images/sushi_app_concept.jpeg",
         url: '',
-        categories: ["mobile", "ui design"]
+        categories: ["mobile", "ui design", "food"]
     },
     {
-        slug: 'proyecto-5',
         id: "4",
-        title: 'Proyecto 5',
-        description: 'Descripción del Proyecto 1',
-        imageUrl: '/p5.jpeg',
+        slug: "task_manager_concept",
+        title: 'Takes Manager Concept',
+        description: "A task manager app concept that allows users to create tasks, set deadlines, and track their " +
+            "progress. The app is designed to be simple and easy to use. Users can create tasks, set deadlines, and " +
+            "mark tasks as complete. The app also has a built-in calendar feature that allows users to view their tasks " +
+            "by date. The app is designed to be responsive and works on all devices. The app is built using React, Node.js, " +
+            "and MongoDB.",
+        imageUrl: '/images/task_manager_concept.jpeg',
         url: '',
-        categories: ["web", "ui design"]
+        categories: ["web", "ui design", "development"]
     },
     {
-        slug: 'proyecto-6',
         id: "5",
-        title: 'Proyecto 6',
-        description: 'Descripción del Proyecto 2',
-        imageUrl: '/p6.jpeg',
+        slug: "finance_app_concept",
+        title: 'Financial App Concept',
+        description: "A financial app concept that allows users to track their expenses, set budgets, and manage their " +
+            "finances. The app is designed to be simple and easy to use. Users can add expenses, set budgets, and view " +
+            "reports of their spending. The app also has a built-in notification feature that alerts users when they " +
+            "exceed their budget. The app is designed to be responsive and works on all devices. The app is built using " +
+            "React, Node.js, and MongoDB.",
+        imageUrl: "/images/finance_app_concept.jpeg",
         url: '',
         categories: ["web", "ui design"]
     },
