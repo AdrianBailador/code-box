@@ -1,7 +1,7 @@
+"use client"
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { projects as projectData } from '@/static_content/index';
+import { projects as projectData } from '@/static_content';
 
 const getProjectBySlug = (slug) => {
   return projectData.find((project) => project.slug === slug);
@@ -21,15 +21,10 @@ const ProjectPage = ({ params }) => {
   }
 
   return (
-    <div className="project-details">
+    <div className="container flex min-h-screen flex-col items-center gap-10 py-24 /*lg:p-24*/ project-details">
       <Image src={project.imageUrl} alt={project.title} width={500} height={300} />
       <h2>{project.title}</h2>
       <p>{project.description}</p>
-      <ul>
-        {project.languages.map((language, index) => (
-          <li key={index}>{language}</li>
-        ))}
-      </ul>
       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
     </div>
   );
