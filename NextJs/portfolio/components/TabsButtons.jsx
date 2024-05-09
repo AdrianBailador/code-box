@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ProjectCard from "./ProjectCard";
+import ProjectExperience from "./ProjectExperience";
 
 
 const TabsButtons = () => {
@@ -15,7 +16,7 @@ const TabsButtons = () => {
                         <TabsTrigger value="about">About</TabsTrigger>
                     </TabsList>
                     <TabsContent value="portfolio"><ProjectCard/></TabsContent>
-                    <TabsContent value="about"></TabsContent>
+                    <TabsContent value="about"><ProjectExperience/></TabsContent>
                 </Tabs>
             }
         </div>
