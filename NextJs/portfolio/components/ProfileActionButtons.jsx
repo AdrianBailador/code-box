@@ -1,29 +1,27 @@
 'use client'
-
-import {SlSocialLinkedin} from "react-icons/sl";
-import {MdMailOutline} from "react-icons/md";
 import {Button} from "@/components/ui/button";
+import {RiLinkedinFill, RiMailFill, RiMailLine} from "@remixicon/react";
 
 const ProfileActionButtons = () => {
     return (
-        <div className="profile-action-buttons flex gap-2">
+        <div className="profile-action-buttons w-full flex gap-2">
 
             <Button
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md"
+                className="w-full bg-primaryMain hover:bg-secondaryMain text-white font-bold py-2 px-4 rounded-xl"
                 onClick={() => window.open('/resume.pdf', '_blank')}
             >
                 Download My CV
             </Button>
             <a
-                className="bg-slate-100 hover:bg-slate-200 text-green-600 font-bold py-2 px-4 rounded-md"
+                className="bg-n700 hover:bg-slate-200 text-green-600 font-bold py-2 px-4 rounded-xl"
                 href={'mailto: name@email.com'}>
-                <MdMailOutline size={24}/>
+                <RiMailLine size={24}/>
             </a>
             <a
-                className="bg-slate-100 hover:bg-slate-200 text-green-600 font-bold py-2 px-4 rounded-md"
+                className="bg-n700 hover:bg-slate-200 text-green-600 font-bold py-2 px-4 rounded-xl"
                 href={'https://linkedin.com'}
                 target={'_blank'}>
-                <SlSocialLinkedin size={24}/>
+                <RiLinkedinFill size={24}/>
             </a>
         </div>
     );
