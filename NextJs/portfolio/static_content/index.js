@@ -54,34 +54,52 @@ export const socialNetworks = [
 
 export const projects = [
     {
+        id: "0",
         title: 'Proyecto 1',
         description: 'Descripción del Proyecto 1',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/p1.png',
+        url: '',
+        categories: ["mobile", "ui design"]
     },
     {
+        id: "1",
         title: 'Proyecto 2',
         description: 'Descripción del Proyecto 2',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/p2.png',
+        url: '',
+        categories: ["web", "ui design"]
     },
     {
+        id: "2",
         title: 'Proyecto 3',
         description: 'Descripción del Proyecto 1',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/p3.jpeg',
+        url: '',
+        categories: ["mobile", "ui design", "web"]
     },
     {
+        id: "3",
         title: 'Proyecto 4',
         description: 'Descripción del Proyecto 2',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/p4.jpeg',
+        url: '',
+        categories: ["mobile", "ui design"]
     },
     {
+        id: "4",
         title: 'Proyecto 5',
         description: 'Descripción del Proyecto 1',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/p5.jpeg',
+        url: '',
+        categories: ["web", "ui design"]
     },
     {
+        id: "5",
         title: 'Proyecto 6',
         description: 'Descripción del Proyecto 2',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/p6.jpeg',
+        url: '',
+        categories: ["web", "ui design"]
     },
 
 ];
