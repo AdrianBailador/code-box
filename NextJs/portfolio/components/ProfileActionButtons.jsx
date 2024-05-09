@@ -9,7 +9,7 @@ const ProfileActionButtons = () => {
         <div className="profile-action-buttons flex gap-2">
 
             <Button
-                className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md"
                 onClick={() => window.open('/resume.pdf', '_blank')}
             >
                 Download My CV
