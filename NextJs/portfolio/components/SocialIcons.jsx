@@ -1,18 +1,17 @@
-import Link from 'next/link';
-import {socialNetworks} from '../static_content/index';
+import { socialNetworks } from '@/static_content';
 
 const SocialIcons = () => {
     return (
-        <div style={{display: 'flex', gap: '1rem'}}>
+        <div className={'flex gap-6'}>
             {
                 socialNetworks.map((networkS) => (
-                    <Link
-                        className={networkS.name}
-                        href={networkS.url} key={networkS.name}
+                    <a
+                        className={`${networkS.name} text-2xl text-silver-n500 hover:text-silver-n900`}
+                        href={networkS.url} key={networkS.id}
                         target="_blank"
                     >
                         {networkS.icon}
-                    </Link>
+                    </a>
                 ))
             }
         </div>
