@@ -140,10 +140,25 @@ export const personalDescription = {
   export const workExperience = [
     {
         id: '0',
-      imageUrl: '/Logotemp.png',
-      name: 'Microsoft',
-      description: 'Desarrollador Web',
+      startdate: '2000',
+      endDate: '2001',
+      currentJob: true,
+      company: 'Microsoft',
+      country: 'US',
+      title: 'Backend Dev',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       items: ['Dotnet', 'Microservicios', 'BBDD'],
+    },
+    {
+        id: '1',
+      startdate: '2002',
+      endDate: '2007',
+      currentJob: false,
+      company: 'Google',
+      country: 'US',
+      title: 'Front Dev',
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      items: ['Dotnet', 'Microservicios'],
     },
   ];
 

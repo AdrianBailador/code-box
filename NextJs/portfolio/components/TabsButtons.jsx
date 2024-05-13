@@ -1,6 +1,8 @@
 import React from 'react';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import ProjectList from "@/components/ProjectList";
+import ProjectExperience from './ProjectExperience';
+import Link from 'next/link'
 
 const TabsButtons = () => {
     return (
@@ -11,9 +13,12 @@ const TabsButtons = () => {
             </TabsList>
             <TabsContent value="portfolio">
                 <ProjectList/>
+                <Link className="w-[150px] text-card flex items-center gap-2  rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
+                View All Projects
+            </Link>
             </TabsContent>
             <TabsContent value="about">
-                <h1>About Me</h1>
+                <ProjectExperience />
             </TabsContent>
         </Tabs>
     );
