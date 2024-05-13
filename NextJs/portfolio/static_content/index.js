@@ -8,13 +8,13 @@ export const navigation = [
     },
     {
         id: "1",
-        title: "Experience",
-        url: "#",
+        title: "Projects",
+        url: "/projects",
     },
     {
         id: "3",
         title: "Education",
-        url: "#",
+        url: "/education",
         onlyMobile: false,
     },
     {
