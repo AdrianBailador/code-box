@@ -2,53 +2,30 @@ import Image from 'next/image';
 import { personalDescription, workExperience, education, skills } from '../static_content/index';
 
 const ProjectExperience = () => (
-  <div className="space-y-8">
-    <div className="card p-4 shadow-lg">
-      <h2 className="text-2xl font-bold">{personalDescription.description}</h2>
+  <div className="relative flex flex-col gap-4 text-gray-700 bg-clip-border rounded-xl w-full mt-10 px-4">
+    <div className="description-section">
+      <p className="font-bold">{personalDescription.description}</p>
     </div>
 
-    <h1 className="text-3xl font-bold">Work Experience</h1>
-    <div className="grid grid-cols-2 gap-4">
+    <section className='flex flex-col gap-4'>
+    <h1 className="text-2xl font-bold">Work Experience</h1>
       {workExperience.map((experience, index) => (
-        <div key={index} className="card p-4 shadow-lg">
-          <Image src={experience.imageUrl} alt={experience.name} width={500} height={300} />
-          <h2 className="text-2xl font-bold">{experience.name}</h2>
+        <div key={index} className="flex flex-col gap-2">
+          <h2 className="text-xl font-bold">{experience.title}</h2>
+          <div className='flex gap-2 items-center'>
+            <span className='bg-primaryMain px-2 py-[3px] rounded-md text-xs text-white'>
+            {experience.currentJob ? "Present" : experience.startdate + " - " + experience.endDate} 
+
+              </span>
+            <h3 className='text-md font-bold'>{`${experience.company} / ${experience.country}`}</h3>
+          </div>
           <p>{experience.description}</p>
-          <ul className="list-disc list-inside">
-            {experience.items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
         </div>
       ))}
-    </div>
+   
+    </section>
 
-    <h1 className="text-3xl font-bold">Education</h1>
-    <div className="grid grid-cols-2 gap-4">
-      {education.map((edu, index) => (
-        <div key={index} className="card p-4 shadow-lg">
-          <Image src={edu.imageUrl} alt={edu.name} width={500} height={300} />
-          <h2 className="text-2xl font-bold">{edu.name}</h2>
-          <p>{edu.description}</p>
-          <ul className="list-disc list-inside">
-            {edu.items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-
-    <h1 className="text-3xl font-bold">Skills</h1>
-    <div className="grid grid-cols-2 gap-4">
-      {skills.map((skill, index) => (
-        <div key={index} className="card p-4 shadow-lg">
-          <Image src={skill.imageUrl} alt={skill.name} width={500} height={300} />
-          <h2 className="text-2xl font-bold">{skill.name}</h2>
-          <p>{skill.description}</p>
-         </div>
-      ))}
-    </div>
+  
   </div>
 );
 
