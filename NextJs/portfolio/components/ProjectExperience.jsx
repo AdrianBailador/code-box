@@ -4,7 +4,7 @@ import { personalDescription, workExperience, education, skills, softSkills, har
 const ProjectExperience = () => (
   <div className="relative flex flex-col gap-4 text-gray-700 bg-clip-border rounded-xl w-full mt-10 px-4">
     <div className="description-section">
-      <p className="font-bold">{personalDescription.description}</p>
+      <p>{personalDescription.description}</p>
     </div>
 
     <section className='flex flex-col gap-4'>
@@ -14,7 +14,7 @@ const ProjectExperience = () => (
           <h2 className="text-xl font-bold">{experience.title}</h2>
           <div className='flex gap-2 items-center'>
             <span className='bg-primaryMain px-2 py-[3px] rounded-md text-xs text-white'>
-            {experience.currentJob ? "Present" : experience.startdate + " - " + experience.endDate} 
+            {experience.currentJob ? "Present" : experience.startDate + " - " + experience.endDate}
 
               </span>
             <h3 className='text-md font-bold'>{`${experience.company} / ${experience.country}`}</h3>
@@ -32,7 +32,7 @@ const ProjectExperience = () => (
         <div key={index} className="flex flex-col gap-2">
             <div className='flex gap-2 items-center'>
             <span className='bg-primaryMain px-2 py-[3px] rounded-md text-xs text-white' style={{display: 'inline-block'}}>
-            {experience.currentUni ? "Present" : experience.startdate + " - " + experience.endDate} 
+            {experience.currentUni ? "Present" : experience.startDate + " - " + experience.endDate}
             </span>
           </div>
           <h2 className="text-xl font-bold">{experience.title}</h2>
