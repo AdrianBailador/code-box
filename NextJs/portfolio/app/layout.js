@@ -19,7 +19,9 @@ export default function RootLayout({children}) {
         <html lang="en">
         <body className={poppins.className}>
         <Header/>
+        <main className="container flex min-h-screen flex-col items-center gap-10 py-24 /*lg:p-24*/">
         {children}
+        </main>
         <Footer/>
         </body>
         </html>

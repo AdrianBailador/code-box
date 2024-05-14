@@ -1,5 +1,6 @@
 import {RiGithubFill, RiInstagramFill, RiTwitterFill, RiYoutubeFill} from "@remixicon/react";
 
+
 export const navigation = [
     {
         id: "0",
@@ -165,31 +166,75 @@ export const personalDescription = {
   export const education = [
     {
       id: '0',
-      imageUrl: '/Logotemp.png',
-      name: 'Ingenieria de Software',
-      description: 'Universidad de Valladolid',
-      items: ['Java', 'SQL', 'Arquitectura'],
-    },
-  ];
-
-  export const skills = [
-    {
-      id: '0',
-      imageUrl: '/Logotemp.png',
-      name: 'Dotnet',
-      description: '',
+      startdate: '2002',
+      endDate: '2007',
+      currentUni: false,
+      title: 'Ingenieria de Software',
+      university: 'Universidad de Valladolid',
+      country: 'Spain',
     },
     {
         id: '1',
-        imageUrl: '/Logotemp.png',
+        startdate: '2006',
+        endDate: '2009',
+        currentUni: false,
+        title: 'Ingenieria Mobile',
+        university: 'Universidad de Salamanca',
+        country: 'Spain',
+      },
+  ];
+
+  export const hardSkills = [
+    {
+      id: '0',
+      imageUrl: '/html5.png',
+      name: 'html',
+      description: '30 projects',
+    },
+    {
+        id: '1',
+        imageUrl: '/js.png',
         name: 'Javascript',
-        description: '',
+        description: '10 projects',
       },
       {
         id: '2',
+        imageUrl: '/react.png',
+        name: 'React js',
+        description: '35 projects',
+      },
+      {
+        id: '3',
         imageUrl: '/Logotemp.png',
         name: 'Next js',
-        description: '',
+        description: '5 projects',
       },
+    ];
+
+      export const softSkills = [
+        {
+          id: '0',
+          description: 'Fast Learning',
+        },
+        {
+            id: '1',
+            description: 'Creative thinking',
+          },
+          {
+            id: '2',
+            description: 'Team Work',
+          },
+          {
+            id: '3',
+            description: 'Empathy',
+          },
+          {
+            id: '4',
+            description: 'Problem Resolution',
+          },
+          {
+            id: '5',
+            description: 'Time Management',
+          },
   ];
 
