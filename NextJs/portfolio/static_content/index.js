@@ -134,14 +134,14 @@ export const projects = [
 ];
 
 export const personalDescription = {
-    id: '0',
-    description: 'Hola, Soy Adrian, Ingeniero Software, aprendiendo NEXT.JS, impartido por mi maestro Victor',
+    id: "0",
+    description: "+7 years of experience in developing web and Android mobile applications for multinational companies. Working as a full-stack engineer and trying to build easy-to-use and resilient interfaces for the web. My tools of the trade include ReactJS, Astro Build, NodeJS, Laravel, Yii2, MySQL, and MongoDB. Involved in the full product life cycle from early concept, through technical design, to delivering and maintaining the finished product.",
   };
 
   export const workExperience = [
     {
         id: '0',
-      startdate: '2000',
+      startDate: '2000',
       endDate: '2001',
       currentJob: true,
       company: 'Microsoft',
@@ -152,7 +152,7 @@ export const personalDescription = {
     },
     {
         id: '1',
-      startdate: '2002',
+      startDate: '2002',
       endDate: '2007',
       currentJob: false,
       company: 'Google',
@@ -166,7 +166,7 @@ export const personalDescription = {
   export const education = [
     {
       id: '0',
-      startdate: '2002',
+      startDate: '2002',
       endDate: '2007',
       currentUni: false,
       title: 'Ingenieria de Software',
@@ -175,7 +175,7 @@ export const personalDescription = {
     },
     {
         id: '1',
-        startdate: '2006',
+        startDate: '2006',
         endDate: '2009',
         currentUni: false,
         title: 'Ingenieria Mobile',
