@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 const inter = Inter({subsets: ["latin"]});
 const poppins = Poppins({
-    weight: ['400', '700'],
+    weight: ['300', '400', '500', '600', '700'],
     subsets: ["latin"],
 });
 
