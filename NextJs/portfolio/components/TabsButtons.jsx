@@ -11,14 +11,14 @@ const TabsButtons = () => {
                 <TabsTrigger className={"w-full py-4 rounded-2xl"} value="portfolio">Portfolio</TabsTrigger>
                 <TabsTrigger className={"w-full py-4 rounded-xl"} value="about">About</TabsTrigger>
             </TabsList>
-            <TabsContent value="portfolio">
+            <TabsContent className={"flex flex-col items-center"} value="portfolio">
                 <ProjectList/>
-                <Link className="w-[150px] text-card flex items-center gap-2  rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
-                View All Projects
-            </Link>
+                <Link className="text-card rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
+                    View All Projects
+                </Link>
             </TabsContent>
             <TabsContent value="about">
-                <ProjectExperience />
+                <ProjectExperience/>
             </TabsContent>
         </Tabs>
     );
