@@ -187,25 +187,25 @@ export const personalDescription = {
   export const hardSkills = [
     {
       id: '0',
-      imageUrl: '/html5.png',
-      name: 'html',
+      imageUrl: '/images/FireBase.png',
+      name: 'FireBase',
       description: '30 projects',
     },
     {
         id: '1',
-        imageUrl: '/js.png',
+        imageUrl: '/images/JavaScript.png',
         name: 'Javascript',
         description: '10 projects',
       },
       {
         id: '2',
-        imageUrl: '/react.png',
+        imageUrl: '/images/react.png',
         name: 'React js',
         description: '35 projects',
       },
       {
         id: '3',
-        imageUrl: '/Logotemp.png',
+        imageUrl: '/images/Next.png',
         name: 'Next js',
         description: '5 projects',
       },
