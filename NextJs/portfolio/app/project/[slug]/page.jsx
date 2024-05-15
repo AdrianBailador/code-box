@@ -22,6 +22,9 @@ export default async function ProjectPage({ params }) {
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
                 {post.title} {/* Cambiado de slug a title para mostrar el título */}
             </h1>
+            <p className={"text-primaryMain"}>
+                {post.categories.join(', ')}
+            </p>
             <Image
                 className={"rounded-2xl object-cover w-full h-full"}
                 width={640}
@@ -38,10 +41,6 @@ export default async function ProjectPage({ params }) {
             <Link className="text-card flex items-center gap-2  rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
                 <RiArrowLeftLine size="20px" color="white"/> Back
             </Link>
-            {/*<p className={"text-primaryMain"}>
-                {postProject.categories.join(', ')}
-            </p>
-            */}
         </div>
     );
 }
