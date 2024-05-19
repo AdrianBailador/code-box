@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import markdownToHtml from "@/lib/markdownToHtml";
 import markdownStyles from "@/styles/markdown-styles.module.css";
-import {getProjectsBySlug} from "@/lib/api";
+import {getEducationBySlug} from "@/lib/api";
 
-export default async function ProjectPage({ params }) {
-    const post = getProjectsBySlug(params.slug);
+export default async function EducationPage({ params }) {
+    const post = getEducationBySlug(params.slug);
     if (!post) {
         return notFound();
     }
@@ -16,7 +16,7 @@ export default async function ProjectPage({ params }) {
 
     return (
         <div className="container flex min-h-screen flex-col items-center gap-10 py-24">
-            <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/project"}>
+            <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/education"}>
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
@@ -46,5 +46,5 @@ export default async function ProjectPage({ params }) {
 }
 
 export function getPostBySlug(slug) {
-    return projectData.find((project) => project.slug === slug);
+    return educationData.find((education) => education.slug === slug);
 }
