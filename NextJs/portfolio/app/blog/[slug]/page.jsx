@@ -21,7 +21,7 @@ export default async function BlogPage({ params }) {
             <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/blog"}>
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
-            <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
+            <h1 className={"'text-2xl lg:text-3xl xl:text-3xl'"}>
                 {post.title} {/* Cambiado de slug a title para mostrar el título */}
             </h1>
             <p className={"text-primaryMain"}>

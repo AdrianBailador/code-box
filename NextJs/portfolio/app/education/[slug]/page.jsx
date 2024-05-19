@@ -16,7 +16,7 @@ export default async function EducationPage({ params }) {
 
     return (
         <div className="container flex min-h-screen flex-col items-center gap-10 py-24">
-            <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/education"}>
+            <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/project"}>
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
