@@ -22,7 +22,6 @@
         --tabsBg: hsl(210, 26%, 14%);
         --tabsSelected: hsl(210, 41%, 8%);
     }
-
 }
 
 @layer base {
