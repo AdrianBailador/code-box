@@ -6,8 +6,11 @@ import Image from "next/image";
 import MenuSvg from "@/components/MenuSvg";
 import {RiSunFill} from "@remixicon/react";
 import LogoTemp from "../public/Logotemp.png";
+import {useTheme} from "next-themes";
 
 const Header = () => {
+    const { theme, setTheme } = useTheme()
+
     const pathname = usePathname();
     const [openNavigation, setOpenNavigation] = useState(false);
 
@@ -27,15 +30,14 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed h-[64px] top-0 left-0 w-full z-50 bg-bgNav ${
-                openNavigation ? "bg-silver-n0/80" : "bg-bgNav backdrop-blur-sm"
+            className={`fixed h-[64px] top-0 left-0 w-full z-50 bg-navbar ${
+                openNavigation ? "bg-navbar/80" : "bg-navbar backdrop-blur-sm"
             }`}
         >
             <div className="flex justify-between items-center  h-full px-5 lg:px-7.5 xl:px-10">
                 <a className="relative block w-[60px] h-[40px] xl:mr-8" href="/public">
-                    <Image src={LogoTemp} alt="Logo Tipo" />
+                    <Image src={LogoTemp} alt="Logo Tipo"/>
                 </a>
-
                 <nav
                     className={`${openNavigation ? "flex" : "hidden"} 
                     fixed top-[4rem] left-0 right-0 bottom-0 bg-white/90 backdrop-blur-sm lg:static lg:flex lg:mx-auto lg:bg-transparent`
@@ -60,14 +62,18 @@ const Header = () => {
                         ))}
                     </div>
                 </nav>
-                <button className="hidden lg:flex rounded-full bg-primaryMain p-2">
-                    <RiSunFill size="24px" color="white" />
+                <button
+                    onClick={() => {
+                        setTheme(theme === 'light' ? 'dark' : 'light')
+                    }}
+                    className="hidden lg:flex rounded-full bg-primary p-2">
+                    <RiSunFill size="24px" color="white"/>
                 </button>
                 <button
                     className="ml-auto lg:hidden"
                     onClick={toggleNavigation}
                 >
-                    <MenuSvg openNavigation={openNavigation} />
+                    <MenuSvg openNavigation={openNavigation}/>
                 </button>
             </div>
         </header>

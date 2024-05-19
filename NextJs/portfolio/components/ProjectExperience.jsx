@@ -2,7 +2,7 @@ import Image from 'next/image';
 import {personalDescription, workExperience, education, skills, softSkills, hardSkills} from '../static_content/index';
 
 const ProjectExperience = () => (
-    <div className="relative flex flex-col gap-8 text-gray-700 bg-clip-border rounded-xl w-full mt-10 px-4">
+    <div className="relative flex flex-col gap-8  bg-clip-border rounded-xl w-full mt-10 px-4">
         {/*Description or About me -- Section*/}
         <div className="mb-4">
             <p>{personalDescription.description}</p>
@@ -15,7 +15,7 @@ const ProjectExperience = () => (
                 <div key={index} className="flex flex-col gap-2">
                     <h2 className="text-xl font-medium">{experience.title}</h2>
                     <div className='flex gap-2 items-center'>
-                <span className='bg-primaryMain px-2 py-[3px] rounded-md text-xs text-white'>
+                <span className='bg-primary px-2 py-[3px] rounded-md text-xs text-white'>
                 {experience.currentJob ? "Present" : experience.startDate + " - " + experience.endDate}
 
                   </span>
@@ -33,7 +33,7 @@ const ProjectExperience = () => (
                 {education.map((experience, index) => (
                     <div key={index} className="flex flex-col gap-2">
                         <div className='flex gap-2 items-center'>
-            <span className='bg-primaryMain px-2 py-[3px] rounded-md text-xs text-white'
+            <span className='bg-primary px-2 py-[3px] rounded-md text-xs text-white'
                   style={{display: 'inline-block'}}>
             {experience.currentUni ? "Present" : experience.startDate + " - " + experience.endDate}
             </span>
@@ -54,6 +54,7 @@ const ProjectExperience = () => (
                     <div key={index} className="flex flex-col gap-2">
                         <div className='flex gap-2 items-center rounded-xl overflow-hidden'>
                             <Image
+                                loading={"lazy"}
                                 width={200}
                                 height={200}
                                 src={experience.imageUrl}
@@ -72,7 +73,7 @@ const ProjectExperience = () => (
         {/*Soft Skills -- Section*/}
         <section className='flex flex-col gap-4'>
             <h1 className="text-2xl font-medium">Soft Skills</h1>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {softSkills.map((experience, index) => (
                     <div key={index} className="flex flex-col gap-2">
                         <h5 className="text-lg font-medium">{experience.description}</h5>
