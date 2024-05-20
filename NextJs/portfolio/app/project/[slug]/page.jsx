@@ -1,10 +1,12 @@
 import {notFound} from "next/navigation";
-import {RiArrowLeftCircleFill, RiArrowLeftLine} from "@remixicon/react";
+import {RiArrowLeftCircleFill, RiArrowLeftCircleLine, RiArrowLeftLine} from "@remixicon/react";
 import Link from "next/link";
 import Image from "next/image";
 import markdownToHtml from "@/lib/markdownToHtml";
 import markdownStyles from "@/styles/markdown-styles.module.css";
 import {getProjectsBySlug} from "@/lib/api";
+import 'prismjs/themes/prism-coy.css';
+import {copyToClipboard} from "@/lib/utils";
 
 export default async function ProjectPage({ params }) {
     const post = getProjectsBySlug(params.slug);
@@ -17,7 +19,7 @@ export default async function ProjectPage({ params }) {
     return (
         <div className="container flex min-h-screen flex-col items-center gap-10 py-24">
             <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/project"}>
-                <RiArrowLeftCircleFill size="24px" color="white"/>
+                <RiArrowLeftLine size="24px" color="white"/>
             </Link>
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
                 {post.title} {/* Cambiado de slug a title para mostrar el título */}

@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {ThemeProvider} from "@/components/theme-provider";
+import '../styles/atom-prism.css'
+
 
 const inter = Inter({subsets: ["latin"]});
 const poppins = Poppins({

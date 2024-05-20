@@ -7,7 +7,7 @@ import Link from 'next/link'
 const TabsButtons = () => {
     return (
         <Tabs defaultValue="portfolio" className="w-full ">
-            <TabsList className={"bg-tabs w-full px-4 py-10 rounded-2xl"}>
+            <TabsList className={"bg-tabsBg w-full px-4 py-10 rounded-2xl"}>
                 <TabsTrigger className={"w-full py-4 rounded-2xl"} value="portfolio">Portfolio</TabsTrigger>
                 <TabsTrigger className={"w-full py-4 rounded-xl"} value="about">About</TabsTrigger>
             </TabsList>

@@ -1,4 +1,6 @@
 import createMDX from '@next/mdx'
+
+
  // Configuración de MDX
 const withMDX = createMDX({
     extension: /\.mdx?$/,  // Configura las extensiones .mdx y .md para ser procesadas
