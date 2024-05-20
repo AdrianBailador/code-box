@@ -40,9 +40,9 @@ export default async function ProjectPage({ params }) {
                     dangerouslySetInnerHTML={{__html: content}}
                 />
             </div>
-            <Link className="text-card flex items-center gap-2  rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
-                <RiArrowLeftLine size="20px" color="white"/> Back
-            </Link>
+            <Link className="text-white rounded-lg bg-primary px-4 py-2" href={"/project"}>
+                    Back
+                </Link>
         </div>
     );
 }

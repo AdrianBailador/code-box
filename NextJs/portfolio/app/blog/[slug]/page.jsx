@@ -18,10 +18,10 @@ export default async function BlogPage({ params }) {
 
     return (
         <div className="container flex min-h-screen flex-col items-center gap-10 py-24">
-            <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/blog"}>
+            <Link className="hidden lg:flex rounded-full bg-primary p-2" href={"/blog"}>
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
-            <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
+            <h1 className={"'text-2xl lg:text-3xl xl:text-3xl'"}>
                 {post.title} {/* Cambiado de slug a title para mostrar el título */}
             </h1>
             <p className={"text-primaryMain"}>
@@ -40,9 +40,9 @@ export default async function BlogPage({ params }) {
                     dangerouslySetInnerHTML={{__html: content}}
                 />
             </div>
-            <Link className="text-card flex items-center gap-2  rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
-                <RiArrowLeftLine size="20px" color="white"/> Back
-            </Link>
+            <Link className="text-white rounded-lg bg-primary px-4 py-2" href={"/blog"}>
+                    Back
+                </Link>
         </div>
     );
 }

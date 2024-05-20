@@ -16,7 +16,7 @@ export default async function EducationPage({ params }) {
 
     return (
         <div className="container flex min-h-screen flex-col items-center gap-10 py-24">
-            <Link className="hidden lg:flex rounded-full bg-primaryMain p-2" href={"/education"}>
+            <Link className="hidden lg:flex rounded-full bg-primary p-2" href={"/education"}>
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
@@ -38,9 +38,9 @@ export default async function EducationPage({ params }) {
                     dangerouslySetInnerHTML={{__html: content}}
                 />
             </div>
-            <Link className="text-card flex items-center gap-2  rounded-lg bg-primaryMain px-4 py-2" href={"/"}>
-                <RiArrowLeftLine size="20px" color="white"/> Back
-            </Link>
+            <Link className="text-white rounded-lg bg-primary px-4 py-2" href={"/education"}>
+                    Back
+                </Link>
         </div>
     );
 }

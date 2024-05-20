@@ -13,7 +13,7 @@ const TabsButtons = () => {
             </TabsList>
             <TabsContent className={"flex flex-col items-center"} value="portfolio">
                 <ProjectList/>
-                <Link className="text-white rounded-lg bg-primary px-4 py-2" href={"/"}>
+                <Link className="text-white rounded-lg bg-primary px-4 py-2" href={"/project"}>
                     View All Projects
                 </Link>
             </TabsContent>

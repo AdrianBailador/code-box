@@ -1,12 +1,12 @@
 'use client';
-import {navigation} from "@/static_content";
-import {useState} from "react";
-import {usePathname} from "next/navigation";
+import { navigation } from "@/static_content";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import MenuSvg from "@/components/MenuSvg";
-import {RiSunFill} from "@remixicon/react";
 import LogoTemp from "../public/Logotemp.png";
-import {useTheme} from "next-themes";
+import { useTheme } from "next-themes";
+import { RiSunFill, RiMoonFill } from "@remixicon/react";
 
 const Header = () => {
     const { theme, setTheme } = useTheme()
@@ -30,13 +30,12 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed h-[64px] top-0 left-0 w-full z-50 bg-navbar ${
-                openNavigation ? "bg-navbar/80" : "bg-navbar backdrop-blur-sm"
-            }`}
+            className={`fixed h-[64px] top-0 left-0 w-full z-50 bg-navbar ${openNavigation ? "bg-navbar/80" : "bg-navbar backdrop-blur-sm"
+                }`}
         >
             <div className="flex justify-between items-center  h-full px-5 lg:px-7.5 xl:px-10">
                 <a className="relative block w-[60px] h-[40px] xl:mr-8" href="/public">
-                    <Image src={LogoTemp} alt="Logo Tipo"/>
+                    <Image src={LogoTemp} alt="Logo Tipo" />
                 </a>
                 <nav
                     className={`${openNavigation ? "flex" : "hidden"} 
@@ -49,13 +48,11 @@ const Header = () => {
                                 key={item.id}
                                 href={item.url}
                                 onClick={handleClick}
-                                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                                    item.onlyMobile ? "lg:hidden" : ""
-                                } px-6 py-6 lg:py-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                                    item.url === pathname.hash
+                                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""
+                                    } px-6 py-6 lg:py-2 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url === pathname.hash
                                         ? "z-2 lg:text-n-1"
                                         : "lg:text-n-1/50"
-                                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+                                    } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
                             >
                                 {item.title}
                             </a>
@@ -67,13 +64,13 @@ const Header = () => {
                         setTheme(theme === 'light' ? 'dark' : 'light')
                     }}
                     className="hidden lg:flex rounded-full bg-primary p-2">
-                    <RiSunFill size="24px" color="white"/>
+                    {theme === 'light' ? <RiSunFill size="24px" color="white" /> : <RiMoonFill size="24px" color="white" />}
                 </button>
                 <button
                     className="ml-auto lg:hidden"
                     onClick={toggleNavigation}
                 >
-                    <MenuSvg openNavigation={openNavigation}/>
+                    <MenuSvg openNavigation={openNavigation} />
                 </button>
             </div>
         </header>
