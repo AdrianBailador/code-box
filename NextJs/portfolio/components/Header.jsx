@@ -7,6 +7,7 @@ import MenuSvg from "@/components/MenuSvg";
 import LogoTemp from "../public/Logotemp.png";
 import { useTheme } from "next-themes";
 import { RiSunFill, RiMoonFill } from "@remixicon/react";
+import Link from "next/link";
 
 const Header = () => {
     const { theme, setTheme } = useTheme()
@@ -44,7 +45,7 @@ const Header = () => {
                 >
                     <div className="w-full relative z-2 flex flex-col items-center justify-start lg:flex-row">
                         {navigation.map((item) => (
-                            <a
+                            <Link
                                 key={item.id}
                                 href={item.url}
                                 onClick={handleClick}
@@ -55,7 +56,7 @@ const Header = () => {
                                     } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
                             >
                                 {item.title}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </nav>

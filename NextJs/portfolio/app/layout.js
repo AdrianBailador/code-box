@@ -13,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Personal Portfolio",
+  title: "Portfolio | Home",
+  description: "Home Portfolio",
 };
 
 export default function RootLayout({children}) {
