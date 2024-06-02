@@ -35,7 +35,7 @@ const Header = () => {
                 }`}
         >
             <div className="flex justify-between items-center  h-full px-5 lg:px-7.5 xl:px-10">
-                <a className="relative block w-[60px] h-[40px] xl:mr-8" href="/public">
+                <a className="relative block w-[60px] h-[40px] xl:mr-8" href="/">
                     <Image src={LogoTemp} alt="Logo Tipo" />
                 </a>
                 <nav
