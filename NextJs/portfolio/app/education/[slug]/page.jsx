@@ -5,6 +5,7 @@ import Image from "next/image";
 import markdownToHtml from "@/lib/markdownToHtml";
 import markdownStyles from "@/styles/markdown-styles.module.css";
 import {getEducationBySlug} from "@/lib/api";
+import Head from 'next/head';
 
 export default async function EducationPage({ params }) {
     const post = getEducationBySlug(params.slug);
@@ -16,11 +17,18 @@ export default async function EducationPage({ params }) {
 
     return (
         <div className="container flex min-h-screen flex-col items-center gap-10 py-24">
+            <Head>
+                <title>{post.title}</title>
+                <meta name="description" content={post.description} />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.description} />
+                <meta property="og:image" content={post.coverImage} />
+            </Head>
             <Link className="hidden lg:flex rounded-full bg-primary p-2" href={"/education"}>
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl text-card-foreground'"}>
-                {post.title} {/* Cambiado de slug a title para mostrar el título */}
+                {post.title}
             </h1>
             <p className={"text-primaryMain"}>
                 {post.categories.join(', ')}

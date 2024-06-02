@@ -22,7 +22,7 @@ export default async function BlogPage({ params }) {
                 <RiArrowLeftCircleFill size="24px" color="white"/>
             </Link>
             <h1 className={"'text-2xl lg:text-3xl xl:text-3xl'"}>
-                {post.title} {/* Cambiado de slug a title para mostrar el título */}
+                {post.title} {}
             </h1>
             <p className={"text-primaryMain"}>
                 {post.categories.join(', ')}
